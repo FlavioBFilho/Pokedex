@@ -8,7 +8,7 @@ const PokeList = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        api.get('/pokemon?limit=151')
+        api.get('/pokemon?limit=151&offset=0')
         .then(response => {
             setPokemonData(response.data);
         })
